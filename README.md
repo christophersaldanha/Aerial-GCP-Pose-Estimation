@@ -3,6 +3,7 @@ By: Christopher Saldanha**
 
 
 **1. Network Architecture**
+
 I implemented a _Multi-Task Learning (MTL) Architecture using a ResNet-50 backbone._
 
 _Backbone_: Pre-trained ResNet-50 was used for robust feature extraction from high-resolution aerial imagery. The final fully connected layer was replaced with an Identity layer to extract raw spatial features.
@@ -19,6 +20,7 @@ _Classification Head:_ A parallel branch with a Linear(256) -> ReLU -> Dropout(0
 
 
 **2. Training Strategy**
+
 _Data Augmentation: _Used the albumentations library to resize images to 512x512. This library was chosen because it automatically recalculates keypoint coordinates during resizing.
 
 _Coordinate Normalization:_ Coordinates were converted to percentages of image width/height. This prevents exploding gradients and makes the model resolution-agnostic.
@@ -37,6 +39,7 @@ _Balanced Loss: _Total Loss = (10.0 * MSE) + CrossEntropy. The multiplier was ad
 
 
 **3. Data Handling & Challenges (Key Insights)**
+
 _Dataset Anomalies:_ During Exploratory Data Analysis (EDA), I discovered that the gcp_marks.json file was heavily un-sanitized.
 
 _Incomplete Annotations:_ Approximately 49.5% (495 out of 1000) of the training records were missing the verified_shape label.
@@ -52,6 +55,7 @@ _Mitigation:_ I implemented a robust data sanitation filter in the PyTorch Datas
 
 
 **4. Instructions to Reproduce**
+
 Mount the Google Drive dataset shortcut.
 
 Run the provided Google Colab notebook cells in order.
