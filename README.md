@@ -1,6 +1,8 @@
 **# Aerial-GCP-Pose-Estimation
 By: Christopher Saldanha**
 
+**NOTE**: 15 epoch's have been utilized. This may take a longer time to train depending on your hardware. In case of time efficiency kindly reduce it to 5.
+
 
 **1. Network Architecture**
 
