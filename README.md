@@ -1,7 +1,7 @@
 **# Aerial-GCP-Pose-Estimation
 By: Christopher Saldanha**
 
-**NOTE**: 15 epoch's have been utilized. This may take a longer time to train depending on your hardware. In case of time efficiency kindly reduce it to 5.
+**NOTE**: 15 epoch's have been utilized for increased accuracy. This may take a longer time to train depending on your hardware. In case of time efficiency kindly reduce it to 5.
 
 
 **1. Network Architecture**
@@ -61,6 +61,8 @@ _Mitigation:_ I implemented a robust data sanitation filter in the PyTorch Datas
 Mount the Google Drive dataset shortcut.
 
 Run the provided Google Colab notebook cells in order.
+
+If using other IDE's or any errors kindly run -> **pip install -r requirements.txt**
 
 The script will automatically clean the data, train for 15 epochs, and output _predictions.json.
 _
