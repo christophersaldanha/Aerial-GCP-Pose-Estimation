@@ -21,15 +21,15 @@ _Classification Head:_ A parallel branch with a Linear(256) -> ReLU -> Dropout(0
 
 **2. Training Strategy**
 
-_Data Augmentation: _Used the albumentations library to resize images to 512x512. This library was chosen because it automatically recalculates keypoint coordinates during resizing.
+_Data Augmentation:_ Used the albumentations library to resize images to 512x512. This library was chosen because it automatically recalculates keypoint coordinates during resizing.
 
 _Coordinate Normalization:_ Coordinates were converted to percentages of image width/height. This prevents exploding gradients and makes the model resolution-agnostic.
 
-_Loss Function: * Regression: _Mean Squared Error (MSE)
+_Loss Function:  Regression:_ Mean Squared Error (MSE)
 
 _Classification:_ Cross-Entropy Loss
 
-_Balanced Loss: _Total Loss = (10.0 * MSE) + CrossEntropy. The multiplier was added to balance the tiny magnitude of normalized coordinate errors with the larger classification errors.
+_Balanced Loss:_ Total Loss = (10.0 * MSE) + CrossEntropy. The multiplier was added to balance the tiny magnitude of normalized coordinate errors with the larger classification errors.
 
 
 
