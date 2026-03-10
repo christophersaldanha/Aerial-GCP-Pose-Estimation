@@ -13,6 +13,11 @@ _Classification Head:_ A parallel branch with a Linear(256) -> ReLU -> Dropout(0
 
 
 
+
+
+
+
+
 **2. Training Strategy**
 _Data Augmentation: _Used the albumentations library to resize images to 512x512. This library was chosen because it automatically recalculates keypoint coordinates during resizing.
 
@@ -26,12 +31,23 @@ _Balanced Loss: _Total Loss = (10.0 * MSE) + CrossEntropy. The multiplier was ad
 
 
 
+
+
+
+
+
 **3. Data Handling & Challenges (Key Insights)**
 _Dataset Anomalies:_ During Exploratory Data Analysis (EDA), I discovered that the gcp_marks.json file was heavily un-sanitized.
 
 _Incomplete Annotations:_ Approximately 49.5% (495 out of 1000) of the training records were missing the verified_shape label.
 
 _Mitigation:_ I implemented a robust data sanitation filter in the PyTorch Dataset constructor. This proactive filter identifies and skips any record missing required keys before training begins, preventing KeyError crashes in the DataLoader and ensuring the model only learns from high-quality, verified data.
+
+
+
+
+
+
 
 
 
