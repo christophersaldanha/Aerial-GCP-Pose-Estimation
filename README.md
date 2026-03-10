@@ -69,4 +69,4 @@ _
 
 5: Download Best Model Weight
 
-Click on this link in order to Download the Best Model Weight : https://drive.google.com/file/d/1O2aDh6gdibETO9ayok8gwfRT6nT4ypL2/view?usp=sharing
+Click on this link in order to Download the Best Model Weight via Google Drive : https://drive.google.com/file/d/1O2aDh6gdibETO9ayok8gwfRT6nT4ypL2/view?usp=sharing
